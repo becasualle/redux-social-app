@@ -4,7 +4,6 @@ import { nanoid } from '@reduxjs/toolkit';
 
 import { postAdded } from './postSlice';
 
-
 const AddPostForm = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -33,14 +32,13 @@ const AddPostForm = () => {
             <h2>Add a New Post</h2>
             <form>
                 <label htmlFor="postTitle">Post Title:</label>
-                <input type="text" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} />
+                <input type="text" id="postTitle" name="postTitle" value={title} onChange={onTitleChanged} placeholder="Enter title" />
                 <label htmlFor="postContent">Content:</label>
                 <textarea id="postContent" name="postContent" value={content} onChange={onContentChanged} />
                 <button type="button" onClick={onSavePostClicked}>Save Post</button>
             </form>
         </section>
-
     )
 }
 
-export default AddPostForm
+export default AddPostForm;

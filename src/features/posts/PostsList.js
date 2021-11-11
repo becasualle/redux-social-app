@@ -12,8 +12,6 @@ const PostsList = () => {
         </article>
     ))
 
-    console.log(renderPosts)
-
     return (
         <section className="posts-list">
             <h2>Posts</h2>
