@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+// достаем айди поста из ссылки, находим этот пост в массиве внутри стейта, рендерим его
 const SinglePostPage = ({ match }) => {
     // React Router передает объект match, который содежрит инфу об URL
     // Когда установим route для рендера этого компонента, мы попросим его
