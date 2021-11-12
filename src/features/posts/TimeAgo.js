@@ -6,7 +6,7 @@ const TimeAgo = ({ timestamp }) => {
     if (timestamp) {
         const date = parseISO(timestamp);
         const timePeriod = formatDistanceToNow(date);
-        timeAgo = `${timePeriod} ago`
+        timeAgo = `${timePeriod} ago `
     }
     return (
         <span title={timestamp}>
