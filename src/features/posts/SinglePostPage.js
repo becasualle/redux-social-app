@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PostAuthor from './PostAuthor';
+import TimeAgo from './TimeAgo';
 
 // достаем айди поста из ссылки, находим этот пост в массиве внутри стейта, рендерим его
 const SinglePostPage = ({ match }) => {
@@ -24,6 +25,7 @@ const SinglePostPage = ({ match }) => {
         <section>
             <article className="post">
                 <div>
+                    <TimeAgo timestamp={post.date} />
                     <PostAuthor userId={post.user} />
                 </div>
                 <h2>{post.title}</h2>
